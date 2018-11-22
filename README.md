@@ -1,9 +1,11 @@
 # ipqueue
 
 ```bash
-$ curl -XPOST <project-name>.ipqueue.com
+$ curl -XPOST <service>.ipqueue.com
 ```
 
 ```bash
-$ curl <project-name>.ipqueue.com
+$ curl -s <service>.ipqueue.com
 ```
+
+services name samples: acme-crm-prod-mysql, com-mycorp-uat-nginx, org-care-dev-apache, etc...
