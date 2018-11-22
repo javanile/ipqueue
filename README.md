@@ -1,9 +1,9 @@
 # ipqueue
 
 ```bash
-$ curl -XPOST channel-name.ipqueue.com
+$ curl -XPOST <project-name>.ipqueue.com
 ```
 
 ```bash
-$ curl channel-name.ipqueue.com
+$ curl <project-name>.ipqueue.com
 ```
