@@ -9,9 +9,10 @@ class IpQueueAppTest extends TestCase
 {
     public function testGetApi()
     {
-        $app = new IpQueueApp([
-            'REQUEST_METHOD' => 'GET',
-        ]);
+        $app = new IpQueueApp(
+            [ 'Host' => 'test.ipqueue.com' ],
+            [ 'REQUEST_METHOD' => 'GET' ]
+        );
 
         $this->assertEquals($app->run(), "");
     }

@@ -9,6 +9,6 @@ if ($_SERVER['HTTP_HOST'] == IPQUEUE_HOST) {
     return require_once __DIR__.'/public/index.php';
 }
 
-$app = new IpQueueApp($_SERVER);
+$app = new IpQueueApp(getallheaders(), $_SERVER);
 
 echo $app->run();

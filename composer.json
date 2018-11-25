@@ -27,6 +27,7 @@
     "autoload-dev": {
         "psr-4": {
             "Javanile\\IpQueue\\Tests\\": "tests"
-        }
+        },
+        "files": ["tests/fixtures/functions.php"]
     }
 }

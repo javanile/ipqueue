@@ -4,11 +4,25 @@ namespace Javanile\IpQueue;
 
 class IpQueueApp
 {
+    /**
+     * @var array
+     */
+    protected $headers;
+
+    /**
+     * @var array
+     */
     protected $inputServer;
 
-    public function __construct($inputServer)
+    /**
+     * IpQueueApp constructor.
+     *
+     * @param $headers
+     * @param $inputServer
+     */
+    public function __construct($headers, $inputServer)
     {
-
+        $this->headers = $headers;
         $this->inputServer = $inputServer;
     }
 
@@ -18,7 +32,7 @@ class IpQueueApp
     public function run()
     {
         $json = [ 'request' => [] ];
-        foreach (getallheaders() as $key => $value) {
+        foreach ($this->headers as $key => $value) {
             $json['request'][strtolower($key)] = $value;
         }
 
@@ -27,8 +41,7 @@ class IpQueueApp
 
         if (strlen($json['service']['name']) < 4) {
             $json['message'] = [ 'type' => 'error', 'text' => 'Service name is too short' ];
-            echo json_encode($json, JSON_PRETTY_PRINT)."\n";
-            exit(1);
+            return json_encode($json, JSON_PRETTY_PRINT)."\n";
         }
 
         $path = __DIR__.'/data/'.$json['service']['name'][0].'/'.$json['service']['name'][1];
@@ -37,11 +50,7 @@ class IpQueueApp
 
         switch ($json['request']['method']) {
             case 'GET':
-                if ($have) {
-                    echo file_get_contents($file);
-                }
-                exit(0);
-                break;
+                return $have ? file_get_contents($file) : '';
 
             case 'POST':
                 $json['service']['ip'] = $_SERVER['REMOTE_ADDR'];
