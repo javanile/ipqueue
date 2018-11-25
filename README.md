@@ -1,5 +1,5 @@
 # ipqueue
-
+[![StyleCI](https://github.styleci.io/repos/158704688/shield?branch=master)](https://github.styleci.io/repos/158704688)
 [![Build Status](https://travis-ci.org/javanile/ipqueue.svg?branch=master)](https://travis-ci.org/javanile/ipqueue)
 
 
