@@ -20,4 +20,8 @@ $ curl -XPOST <service-name>.ipqueue.com
 $ curl -s <service-name>.ipqueue.com
 ```
 
-`<services-name>` examples can be: *acme-crm-prod-mysql*, *com-mycorp-uat-nginx*, *org-care-dev-apache*, etc...
+`<services-name>` examples can be: 
+  - *acme-crm-prod-mysql*, 
+  - *com-mycorp-uat-nginx*, 
+  - *org-care-dev-apache*, 
+  - etc...
