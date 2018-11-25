@@ -6,6 +6,8 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/00bc294fe3ae4bca8c74d6d6530f3d54)](https://app.codacy.com/app/francescobianco/ipqueue?utm_source=github.com&utm_medium=referral&utm_content=javanile/ipqueue&utm_campaign=Badge_Grade_Dashboard)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+Enable your project to use a service discovery, create script for register service and retrieve service information in a smart way without pain. IpQueue use a simple HTTP API layer easily integrable on every environment, you can use a cURL syntax to integrate on Docker, Kubernates, Jenkins, Travis CI, ecc... 
+
 
 ```bash
 $ curl -XPOST <service>.ipqueue.com
