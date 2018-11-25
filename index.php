@@ -3,11 +3,11 @@
  * javanile/ipqueue (v0.0.1)
  */
 
-define('IPQUEUE_HOST', 'www.ipqueue.com');
-
-if ($_SERVER['HTTP_HOST'] == IPQUEUE_HOST) {
+if (preg_match('/^www\.', $_SERVER['HTTP_HOST'])) {
     return require_once __DIR__.'/public/index.php';
 }
+
+use Javanile\IpQueue\IpQueueApp;
 
 $app = new IpQueueApp(getallheaders(), $_SERVER);
 
