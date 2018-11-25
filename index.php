@@ -1,8 +1,7 @@
 <?php
 /**
- * javanile/ipqueue (v0.0.1)
+ * javanile/ipqueue (v0.0.1).
  */
-
 define('IPQUEUE_HOST', 'www.ipqueue.com');
 
 if ($_SERVER['HTTP_HOST'] == IPQUEUE_HOST) {
