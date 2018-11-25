@@ -8,12 +8,16 @@
 
 Enable your project to use a service discovery. With IpQueue you can create scripts for service registration and service information retrieval in a smart way without pain. IpQueue uses a simple HTTP API layer easily integrable on every environment, you can use a cURL syntax to interact with Docker, Kubernates, Jenkins, Travis CI, etc...
 
+## Get started
+
+**Register your service**
 ```bash
-$ curl -XPOST <service>.ipqueue.com
+$ curl -XPOST <service-name>.ipqueue.com
 ```
 
+**Retrieve service information**
 ```bash
-$ curl -s <service>.ipqueue.com
+$ curl -s <service-name>.ipqueue.com
 ```
 
-services name samples: acme-crm-prod-mysql, com-mycorp-uat-nginx, org-care-dev-apache, etc...
+**services-name samples:** *acme-crm-prod-mysql*, *com-mycorp-uat-nginx*, *org-care-dev-apache*, etc...
