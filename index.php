@@ -1,6 +1,6 @@
 <?php
 /**
- * javanile/ipqueue (v0.0.1)
+ * javanile/ipqueue (v0.0.1).
  */
 
 if (preg_match('/^www\.', $_SERVER['HTTP_HOST'])) {

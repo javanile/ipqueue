@@ -31,16 +31,17 @@ class IpQueueApp
      */
     public function run()
     {
-        $json = [ 'request' => [] ];
+        $json = ['request' => []];
         foreach ($this->headers as $key => $value) {
             $json['request'][strtolower($key)] = $value;
         }
 
         $json['request']['method'] = $this->inputServer['REQUEST_METHOD'];
-        $json['service'] = [ 'name' => substr($json['request']['host'], 0, strpos($json['request']['host'], '.')) ];
+        $json['service'] = ['name' => substr($json['request']['host'], 0, strpos($json['request']['host'], '.'))];
 
         if (strlen($json['service']['name']) < 4) {
-            $json['message'] = [ 'type' => 'error', 'text' => 'Service name is too short' ];
+            $json['message'] = ['type' => 'error', 'text' => 'Service name is too short'];
+
             return json_encode($json, JSON_PRETTY_PRINT)."\n";
         }
 
@@ -58,11 +59,11 @@ class IpQueueApp
                     mkdir($path, 0777, true);
                 }
                 file_put_contents($file, $json['service']['ip']);
-                $json['message'] = [ 'type' => 'success', 'text' => 'Service successful updated' ];
+                $json['message'] = ['type' => 'success', 'text' => 'Service successful updated'];
                 break;
 
             default:
-                $json['message'] = [ 'type' => 'error', 'text' => 'Unsupported HTTP method: '.$json['request']['method'] ];
+                $json['message'] = ['type' => 'error', 'text' => 'Unsupported HTTP method: '.$json['request']['method']];
                 break;
         }
 
