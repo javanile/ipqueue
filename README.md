@@ -1,7 +1,8 @@
 # ipqueue
 [![StyleCI](https://github.styleci.io/repos/158704688/shield?branch=master)](https://github.styleci.io/repos/158704688)
 [![Build Status](https://travis-ci.org/javanile/ipqueue.svg?branch=master)](https://travis-ci.org/javanile/ipqueue)
-
+[![codecov](https://codecov.io/gh/javanile/ipqueue/branch/master/graph/badge.svg)](https://codecov.io/gh/javanile/ipqueue)
+[![codebeat badge](https://codebeat.co/badges/ab2ec960-30b4-44d6-b359-e0aaf40d7cd4)](https://codebeat.co/projects/github-com-javanile-ipqueue-master)
 
 ```bash
 $ curl -XPOST <service>.ipqueue.com
