@@ -10,14 +10,14 @@ Enable your project to use a service discovery. With IpQueue you can create scri
 
 ## Get started
 
-**Register your service**
+**Register your service** *(call from service machine or container)*
 ```bash
 $ curl -XPOST <service-name>.ipqueue.com
 ```
 
-**Retrieve service information**
+**Retrieve information of service** *(call from dependants system)*
 ```bash
 $ curl -s <service-name>.ipqueue.com
 ```
 
-**services-name samples:** *acme-crm-prod-mysql*, *com-mycorp-uat-nginx*, *org-care-dev-apache*, etc...
+<services-name> samples: *acme-crm-prod-mysql*, *com-mycorp-uat-nginx*, *org-care-dev-apache*, etc...
