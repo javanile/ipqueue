@@ -1,5 +1,8 @@
 # ipqueue
 
+[![Build Status](https://travis-ci.org/javanile/ipqueue.svg?branch=master)](https://travis-ci.org/javanile/ipqueue)
+
+
 ```bash
 $ curl -XPOST <service>.ipqueue.com
 ```
