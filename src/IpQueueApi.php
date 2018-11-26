@@ -2,7 +2,7 @@
 
 namespace Javanile\IpQueue;
 
-class IpQueueApp
+class IpQueueApi
 {
     /**
      * @var array
@@ -41,7 +41,7 @@ class IpQueueApp
 
         if (strlen($json['service']['name']) < 4) {
             $json['message'] = [ 'type' => 'error', 'text' => 'Service name is too short' ];
-            return json_encode($json, JSON_PRETTY_PRINT)."\n";
+            return $this->json($json);
         }
 
         $path = __DIR__.'/data/'.$json['service']['name'][0].'/'.$json['service']['name'][1];
@@ -53,7 +53,7 @@ class IpQueueApp
                 return $have ? file_get_contents($file) : '';
 
             case 'POST':
-                $json['service']['ip'] = $_SERVER['REMOTE_ADDR'];
+                $json['service']['ip'] = $this->inputServer['REMOTE_ADDR'];
                 if (!$have && !is_dir($path)) {
                     mkdir($path, 0777, true);
                 }
@@ -62,10 +62,23 @@ class IpQueueApp
                 break;
 
             default:
-                $json['message'] = [ 'type' => 'error', 'text' => 'Unsupported HTTP method: '.$json['request']['method'] ];
+                $json['message'] = [
+                    'type' => 'error', 'text' => 'Unsupported HTTP method: '.$json['request']['method']
+                ];
                 break;
         }
 
+        return $this->json($json);
+    }
+
+    /**
+     * Retrieve json response.
+     *
+     * @param $json
+     * @return string
+     */
+    private function json($json)
+    {
         return json_encode($json, JSON_PRETTY_PRINT)."\n";
     }
 }

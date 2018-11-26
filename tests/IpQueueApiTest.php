@@ -2,18 +2,18 @@
 
 namespace Javanile\IpQueue\Tests;
 
-use Javanile\IpQueue\IpQueueApp;
+use Javanile\IpQueue\IpQueueApi;
 use PHPUnit\Framework\TestCase;
 
-class IpQueueAppTest extends TestCase
+class IpQueueApiTest extends TestCase
 {
     public function testGetApi()
     {
-        $app = new IpQueueApp(
+        $api = new IpQueueApi(
             [ 'Host' => 'test.ipqueue.com' ],
             [ 'REQUEST_METHOD' => 'GET' ]
         );
 
-        $this->assertEquals($app->run(), "");
+        $this->assertEquals($api->run(), "");
     }
 }
