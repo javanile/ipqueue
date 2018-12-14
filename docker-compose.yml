@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  php:
+    build: .
+    volumes: ['./:/var/www/html']
+
+  docs:
+    extends: { service: php }
+    entrypoint: ['yamlinc', '--watch', 'spectacle', '-d', 'docs/docs.yml']
+    ports: ['4400:4400']

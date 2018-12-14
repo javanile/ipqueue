@@ -5,7 +5,7 @@
 declare(strict_types=1);
 
 if (preg_match('/^(www\.|ipqueue\.com)/', $_SERVER['HTTP_HOST'])) {
-    return require_once __DIR__.'/public/index.php';
+    return require_once __DIR__.'/docs/index.html';
 }
 
 require_once __DIR__.'/vendor/autoload.php';
