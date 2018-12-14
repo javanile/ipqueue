@@ -9,4 +9,5 @@ services:
   docs:
     extends: { service: php }
     entrypoint: ['yamlinc', '--watch', 'spectacle', '-t', 'docs', '-d', 'docs/docs.yml']
+    volumes: ['./docs/main.hbs:/usr/lib/node_modules/spectacle-docs/app/views/main.hbs']
     ports: ['4400:4400']
