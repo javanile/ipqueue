@@ -1,11 +1,31 @@
+## --------------------
+## DON'T EDIT THIS FILE
+## --------------------
+## Engine: yamlinc@0.1.6
+## Source: docs/docs.yml
+
 swagger: '2.0'
 info:
-  description: |
-    Welcome to the sample Cheese Store API reference. This is a live example of how you can use [Spectacle](https://sourcey.com/spectacle) in conjunction with [Swagger](https://swagger.io) to generate beautiful static documentation for your own APIs.
+  description: >
+    Welcome to the sample Cheese Store API reference. This is a live example of
+    how you can use [Spectacle](https://sourcey.com/spectacle) in conjunction
+    with [Swagger](https://swagger.io) to generate beautiful static
+    documentation for your own APIs.
 
-    The Cheese Store API is organized around the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) methodology, and it uses resource-oriented URLs, and common HTTP response codes to indicate API errors. All requests are authenticated using an `api-key` which can be obtained from your developer dashboard. And now, more cheese...
 
-    Hard cheese gouda say cheese. Ricotta cauliflower cheese cheesecake bocconcini edam bocconcini fromage feta. Who moved my cheese bocconcini cheese and wine cottage cheese cheese on toast who moved my cheese caerphilly stinking bishop. Bocconcini cheesy feet the big cheese macaroni cheese cheesy feet mascarpone.
+    The Cheese Store API is organized around the
+    [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)
+    methodology, and it uses resource-oriented URLs, and common HTTP response
+    codes to indicate API errors. All requests are authenticated using an
+    `api-key` which can be obtained from your developer dashboard. And now, more
+    cheese...
+
+
+    Hard cheese gouda say cheese. Ricotta cauliflower cheese cheesecake
+    bocconcini edam bocconcini fromage feta. Who moved my cheese bocconcini
+    cheese and wine cottage cheese cheese on toast who moved my cheese
+    caerphilly stinking bishop. Bocconcini cheesy feet the big cheese macaroni
+    cheese cheesy feet mascarpone.
   version: 1.0.0
   title: ipqueue
   termsOfService: 'http://cheesy.sourcey.com/terms'
@@ -18,7 +38,9 @@ host: ipqueue.com
 basePath: /
 tags:
   - name: Cheese
-    description: Cheese methods provide access to information and operations relating to the cheese available in the store.
+    description: >-
+      Cheese methods provide access to information and operations relating to
+      the cheese available in the store.
     externalDocs:
       description: Find out more
       url: 'http://cheesy.sourcey.com'
@@ -103,7 +125,9 @@ paths:
       tags:
         - Cheese
       summary: Finds cheeses by tags
-      description: 'Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.'
+      description: >-
+        Multiple tags can be provided with comma separated strings. Use tag1,
+        tag2, tag3 for testing.
       operationId: findCheesesByTags
       produces:
         - application/xml
@@ -353,7 +377,9 @@ paths:
       tags:
         - Store
       summary: Find purchase order by ID
-      description: For valid response try integer IDs with value >= 1 and <= 10. Other values will generate exceptions.
+      description: >-
+        For valid response try integer IDs with value >= 1 and <= 10. Other
+        values will generate exceptions.
       operationId: getOrderById
       produces:
         - application/xml
@@ -380,7 +406,9 @@ paths:
       tags:
         - Store
       summary: Delete purchase order by ID
-      description: For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors.
+      description: >-
+        For valid response try integer IDs with positive integer value. Negative
+        or non-integer values will generate API errors.
       operationId: deleteOrder
       produces:
         - application/xml
@@ -495,7 +523,9 @@ paths:
       tags:
         - Customer
       summary: Customer logout
-      description: Log the currently the authenticated customer out of the system and end the user session.
+      description: >-
+        Log the currently the authenticated customer out of the system and end
+        the user session.
       operationId: logoutCustomer
       produces:
         - application/xml

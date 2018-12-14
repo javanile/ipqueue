@@ -25,3 +25,11 @@ $ curl -s <service-name>.ipqueue.com
   - *com-mycorp-uat-nginx*, 
   - *org-care-dev-apache*, 
   - etc...
+
+
+
+
+Update Documentation
+
+docker-compose up docs
+

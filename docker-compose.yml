@@ -8,5 +8,5 @@ services:
 
   docs:
     extends: { service: php }
-    entrypoint: ['yamlinc', '--watch', 'spectacle', '-d', 'docs/docs.yml']
+    entrypoint: ['yamlinc', '--watch', 'spectacle', '-t', 'docs', '-d', 'docs/docs.yml']
     ports: ['4400:4400']
