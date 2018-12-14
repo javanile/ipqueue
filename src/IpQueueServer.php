@@ -2,28 +2,28 @@
 
 namespace Javanile\IpQueue;
 
-class IpQueueApi
+class IpQueueServer
 {
+    /**
+     * @var array
+     */
+    protected $server;
+
     /**
      * @var array
      */
     protected $headers;
 
     /**
-     * @var array
-     */
-    protected $inputServer;
-
-    /**
      * IpQueueApp constructor.
      *
+     * @param $server
      * @param $headers
-     * @param $inputServer
      */
-    public function __construct($headers, $inputServer)
+    public function __construct($server, $headers)
     {
+        $this->server = $server;
         $this->headers = $headers;
-        $this->inputServer = $inputServer;
     }
 
     /**
@@ -36,7 +36,7 @@ class IpQueueApi
             $json['request'][strtolower($key)] = $value;
         }
 
-        $json['request']['method'] = $this->inputServer['REQUEST_METHOD'];
+        $json['request']['method'] = $this->server['REQUEST_METHOD'];
         $json['service'] = [ 'name' => substr($json['request']['host'], 0, strpos($json['request']['host'], '.')) ];
 
         if (strlen($json['service']['name']) < 4) {
@@ -53,7 +53,7 @@ class IpQueueApi
                 return $have ? file_get_contents($file) : '';
 
             case 'POST':
-                $json['service']['ip'] = $this->inputServer['REMOTE_ADDR'];
+                $json['service']['ip'] = $this->server['REMOTE_ADDR'];
                 if (!$have && !is_dir($path)) {
                     mkdir($path, 0777, true);
                 }
@@ -79,6 +79,6 @@ class IpQueueApi
      */
     private function json($json)
     {
-        return json_encode($json, JSON_PRETTY_PRINT)."\n";
+        return json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n";
     }
 }

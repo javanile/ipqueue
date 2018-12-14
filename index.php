@@ -11,8 +11,8 @@ if (preg_match('/^(www\.|ipqueue\.com)/', $_SERVER['HTTP_HOST'])) {
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use Javanile\IpQueue\IpQueueApi;
+use Javanile\IpQueue\IpQueueServer;
 
-$api = new IpQueueApi(getallheaders(), $_SERVER);
+$server = new IpQueueServer($_SERVER, getallheaders());
 
-echo $api->run();
+echo $server->run();
