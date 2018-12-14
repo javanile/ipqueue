@@ -8,6 +8,8 @@ services:
 
   docs:
     extends: { service: php }
-    entrypoint: ['yamlinc', '--watch', 'spectacle', '-t', 'docs', '-d', 'docs/docs.yml']
-    volumes: ['./docs/main.hbs:/usr/lib/node_modules/spectacle-docs/app/views/main.hbs']
+    entrypoint: ['yamlinc', '--watch', 'spectacle', '-t', 'docs', '-d', 'docs/app/api.yml']
+    volumes:
+      - ./docs/app/views/main.hbs:/usr/lib/node_modules/spectacle-docs/app/views/main.hbs
+      - ./docs/app/views/partials/layout/head.hbs:/usr/lib/node_modules/spectacle-docs/app/views/partials/layout/head.hbs
     ports: ['4400:4400']
