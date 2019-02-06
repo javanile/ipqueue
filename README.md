@@ -46,6 +46,6 @@ docker-compose up docs
 
 ## HTTP Headers
 
-| Method    | Function                             |
+| Header    | Function                             |
 | --------- | ------------------------------------ |
 | `ENV`     | Set specific environment             |
