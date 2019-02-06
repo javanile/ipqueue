@@ -27,9 +27,25 @@ $ curl -s <service-name>.ipqueue.com
   - etc...
 
 
-
-
 Update Documentation
 
 docker-compose up docs
+
+HTTP Methods
+
+| Method    | Function                             |
+| --------- | ------------------------------------ |
+| `GET`     | Retrieve information about a service |
+| `HEAD`    | |
+| `POST`    | |
+| `PUT`     | |
+| `DELETE`  | |
+| `CONNECT` | |
+| `OPTIONS` | |
+| `TRACE`   | |
+
+
+
+
+
 
