@@ -31,7 +31,7 @@ Update Documentation
 
 docker-compose up docs
 
-HTTP Methods
+## HTTP Methods
 
 | Method    | Function                             |
 | --------- | ------------------------------------ |
@@ -44,8 +44,8 @@ HTTP Methods
 | `OPTIONS` | _Not used_                           |
 | `TRACE`   | _Not used_                           |
 
+## HTTP Headers
 
-
-
-
-
+| Method    | Function                             |
+| --------- | ------------------------------------ |
+| `ENV`     | Set specific environment             |
