@@ -36,13 +36,13 @@ HTTP Methods
 | Method    | Function                             |
 | --------- | ------------------------------------ |
 | `GET`     | Retrieve information about a service |
-| `HEAD`    | |
-| `POST`    | |
-| `PUT`     | |
-| `DELETE`  | |
-| `CONNECT` | |
-| `OPTIONS` | |
-| `TRACE`   | |
+| `HEAD`    | _Not used_                           |
+| `POST`    | Register service instance            |
+| `PUT`     | Store service variables and protect  |
+| `DELETE`  | Delete service of remove protection  |
+| `CONNECT` | _Not used_                           |
+| `OPTIONS` | _Not used_                           |
+| `TRACE`   | _Not used_                           |
 
 
 
