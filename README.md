@@ -46,6 +46,7 @@ docker-compose up docs
 
 ## HTTP Headers
 
-| Header    | Function                             |
-| --------- | ------------------------------------ |
-| `ENV`     | Set specific environment             |
+| Header    | Function                 |
+| --------- | ------------------------ |
+| `ENV`     | Set specific environment |
+| `JWT`     | Set authorization token  |
