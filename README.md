@@ -49,4 +49,6 @@ docker-compose up docs
 | Header    | Function                 |
 | --------- | ------------------------ |
 | `ENV`     | Set specific environment |
+| `PKG`     | Set specific package     |
 | `JWT`     | Set authorization token  |
+
