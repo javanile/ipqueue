@@ -20,7 +20,7 @@ $ curl -LXPOST <service>.ipqueue.com
 $ curl -sL <service>.ipqueue.com
 ```
 
-`<services-name>` can be: 
+`<services>` examples: 
   - *acme-crm-mysql*, 
   - *com-mycorp-nginx*, 
   - *org-care-apache*, 
