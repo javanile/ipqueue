@@ -52,3 +52,28 @@ docker-compose up docs
 | `PKG`     | Set specific package     |
 | `JWT`     | Set authorization token  |
 
+
+
+##
+
+generate secret private key ()
+```bash
+$ openssl genrsa -out service-secret.pem 2048
+```
+
+generate public key to send it on ipqueue ()
+```bash
+$ openssl rsa -in service-secret.pem -pubout -out service-public.pem
+```
+
+send public key to ipqueue (now service is protectect)
+```bash
+$ curl -LXPUT -d@service-public.pem service.ipqueue.com 
+```
+
+
+
+
+
+
+
